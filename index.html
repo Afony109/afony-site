@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AFONY FUND — Whitepaper</title>
+  <link rel="icon" href="favicon.png" />
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2rem; background: #f9f9f9; }
+    h1 { color: #333; }
+    .lang-switch { margin-bottom: 1rem; }
+    .lang-switch button { margin-right: 0.5rem; }
+    .section { margin-top: 2rem; }
+    .download { margin-top: 1rem; }
+  </style>
+</head>
+<body>
+  <div class="lang-switch">
+    <button onclick="setLang('en')">English</button>
+    <button onclick="setLang('ru')">Русский</button>
+    <button onclick="setLang('zh')">中文</button>
+  </div>
+
+  <div id="content"></div>
+
+  <div class="download">
+    <a href="AFONY_whitepaper_EN.pdf" download>📄 Download PDF (EN)</a><br/>
+    <a href="AFONY_whitepaper_RU.pdf" download>📄 Скачать PDF (RU)</a><br/>
+    <a href="AFONY_whitepaper_ZH.pdf" download>📄 下载 PDF (中文)</a>
+  </div>
+
+  <script>
+    const whitepapers = {
+      en: `<h1>AFONY FUND — Whitepaper</h1><p>English version coming soon.</p>`,
+      ru: `<h1>AFONY FUND — Белая бумага</h1><p>Русская версия будет доступна скоро.</p>`,
+      zh: `<h1>AFONY FUND — 白皮书</h1><p>中文版本即将上线。</p>`
+    };
+    function setLang(lang) {
+      document.getElementById('content').innerHTML = whitepapers[lang];
+    }
+    setLang('en');
+  </script>
+</body>
+</html>
