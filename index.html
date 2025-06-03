@@ -3,43 +3,82 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AFONY FUND — Whitepaper</title>
-  <link rel="icon" href="favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AFONY FUND</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 2rem; background: #f9f9f9; }
-    h1 { color: #333; }
-    .lang-switch { margin-bottom: 1rem; }
-    .lang-switch button { margin-right: 0.5rem; }
-    .section { margin-top: 2rem; }
-    .download { margin-top: 1rem; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0d0d0d;
+      color: #f0f0f0;
+      text-align: center;
+    }
+    header {
+      padding: 2rem;
+      animation: fadeIn 2s ease-in-out;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    .logo {
+      width: 150px;
+      height: 150px;
+      margin: 2rem auto;
+      animation: pulse 3s infinite;
+    }
+    nav a {
+      color: #00ccff;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .about {
+      max-width: 600px;
+      margin: 2rem auto;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+    .lang-switch, .downloads {
+      margin-top: 2rem;
+    }
+    .downloads a {
+      display: block;
+      margin: 0.5rem 0;
+      color: #ffcc00;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.08); }
+      100% { transform: scale(1); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
   </style>
 </head>
 <body>
-  <div class="lang-switch">
-    <button onclick="setLang('en')">English</button>
-    <button onclick="setLang('ru')">Русский</button>
-    <button onclick="setLang('zh')">中文</button>
-  </div>
+  <header>
+    <img src="logo.png" alt="AFONY Logo" class="logo"/>
+    <h1>AFONY FUND</h1>
+    <nav>
+      <a href="https://t.me/t.time/Afony_Fund" target="_blank">Telegram</a>
+      <a href="https://discord.gg/EXTHJtU2" target="_blank">Discord</a>
+      <a href="https://twitter.com/afony94898" target="_blank">X (Twitter)</a>
+    </nav>
+  </header>
 
-  <div id="content"></div>
+  <section class="about">
+    <h2>О проекте</h2>
+    <p>AFONY FUND — децентрализованный инвестиционный токен на базе Solana, привязанный к реальной торговой прибыли. Прозрачный, надёжный и ориентированный на рост в любых рыночных условиях.</p>
+  </section>
 
-  <div class="download">
-    <a href="AFONY_whitepaper_EN.pdf" download>📄 Download PDF (EN)</a><br/>
-    <a href="AFONY_whitepaper_RU.pdf" download>📄 Скачать PDF (RU)</a><br/>
-    <a href="AFONY_whitepaper_ZH.pdf" download>📄 下载 PDF (中文)</a>
-  </div>
-
-  <script>
-    const whitepapers = {
-      en: `<h1>AFONY FUND — Whitepaper</h1><p>English version coming soon.</p>`,
-      ru: `<h1>AFONY FUND — Белая бумага</h1><p>Русская версия будет доступна скоро.</p>`,
-      zh: `<h1>AFONY FUND — 白皮书</h1><p>中文版本即将上线。</p>`
-    };
-    function setLang(lang) {
-      document.getElementById('content').innerHTML = whitepapers[lang];
-    }
-    setLang('en');
-  </script>
+  <section class="downloads">
+    <h3>📄 Скачать Whitepaper</h3>
+    <a href="AFONY_whitepaper_EN.pdf" download>English</a>
+    <a href="AFONY_whitepaper_RU.pdf" download>Русский</a>
+    <a href="AFONY_whitepaper_ZH.pdf" download>中文</a>
+  </section>
 </body>
 </html>
